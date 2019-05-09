@@ -1,0 +1,78 @@
+Setting Gerrit SSH key in repository:
+
+>>cd “Local Clone Directory”
+>>ssh-keygen -t rsa -C fahim.a@samsung.com -f ~/.ssh/id_rsa
+[You can keep the passphrase blank if you want]
+>>cat ~/.ssh/id_rsa.pub
+
+
+[Copy the whole “ssh-rsa….mySingleID@samsung.com” and in gerrit>”YourName”>Settings>SSH Keys>>add paste and add the string ]
+
+[to check if it was success type the following]
+>>ssh -p 29418 mySingleID@Gerrit_repository_IP
+
+Then clone using the “clone with message hook link”
+ 
+
+Submitting your update in the repository:
+Make sure you have configured git at first:
+
+git config --global user.name "Fahim Ahmed"
+git config --global user.email "fahim.a@samsung.com"
+
+
+Then:
+git status //to check for the files unstaged and modified by you
+
+git add <files modified>
+git commit -m “Issue_Number + Fixed/Failed + Issue Statement” -s
+
+//incase of wrong addition to stage
+(-f for forced remove from stage)
+git rm <fileName> -f 
+
+//To merge with the changes made by other developers
+git pull <remote><branch> --rebase //if you have ssh set and currently in its repo, you can simply git pull --rebase
+
+If any merge conflict is found, your code would have those conflicts written on it by git.
+1. Manually remove/modify the lines of the codes that you want to keep or remove.
+2. For each conflicted file resolved:
+    1.  git add <resolved file>
+3. Once all the conflicts have been manually resolved
+    1. git rebase —continue
+4. Then add this to your last commit,  (Usually it is already applied to last commit, this is failsafe)
+    1. git commit -amend -m “Updated Commit Message”
+
+//Push to Somewhere
+git push origin HEAD:refs/for/branch_name
+
+//Use that commit in another NewBranch
+git cherrypick <commitID> newBranchName
+
+///Undoing a commit/ removing last N commits
+Removing the last commit
+
+//To remove the last commit from git, you can simply run 
+$ git reset --hard HEAD^ 
+
+//If you are removing multiple commits from the top, you can run 
+$ git reset --hard HEAD~2 
+to remove the last two commits. 
+You can increase the number to remove even more commits.
+
+//If you want to "uncommit" the commits, but keep the changes around for reworking, 
+remove the "--hard": 
+$ git reset HEAD^
+which will evict the commits from the branch and from the index, but leave the working tree around.
+
+//If you want to save the commits on a new branch name, 
+then run 
+$ git branch newbranchname before doing the git reset.
+
+
+///Undo a pull !!
+https://chrisk.io/undo-git-pull/
+[neat trick !!]
+
+
+

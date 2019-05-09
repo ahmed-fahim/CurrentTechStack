@@ -1,0 +1,118 @@
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj
+$ git config --global user.name "Fahim Ahmed"
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj
+$ git config --global user.email "fahim.avalon@gmail.com"
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj
+$ git init
+Initialized empty Git repository in F:/Works/Competitive Programming/Lightoj/.git/
+
+
+///Then work on the local repo, with at least 1 file/folder(non empty)
+$ git status
+$ git commit -m "Initial Commit"
+$ git branch solving
+$ git checkout solving
+
+///Do something else now in the folder, this changes would only be tracked in solving branch
+$ git status
+$ git commit -m "Adding some dedicated changes to solving branch only"
+
+///To merge solving with master in master
+$ git checkout master
+$ git merge solving
+
+///if merge conflicts, then resolve conflict and add files manually
+///then continue
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (solving)
+$ git branch codeforces
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (solving)
+$ git checkout codeforces
+Switched to branch 'codeforces'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git status
+On branch codeforces
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Codeforces Solutions/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git add .
+warning: LF will be replaced by CRLF in Codeforces Solutions/Number Theory Repo.cpp.
+The file will have its original line endings in your working directory.
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git commit -m "Adding Codeforces and Templates"
+[codeforces d5c8efc] Adding Codeforces and Templates
+ 6 files changed, 3445 insertions(+)
+ create mode 100644 Codeforces Solutions/Geometry Repo.cpp
+ create mode 100644 Codeforces Solutions/Graph Repo.cpp
+ create mode 100644 Codeforces Solutions/MST Repo.cpp
+ create mode 100644 Codeforces Solutions/Number Theory Repo.cpp
+ create mode 100644 Codeforces Solutions/Shortest Path Repo.cpp
+ create mode 100644 Codeforces Solutions/frame.cpp
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git checkout master
+Switched to branch 'master'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git checkout codeforces
+Switched to branch 'codeforces'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git checkout "codeforces"
+Already on 'codeforces'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git push origin codeforces
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git push https://github.com/ahmed-fahim/Lightoj codeforces
+Username for 'https://github.com': fahim.avalon@gmail.com
+Counting objects: 9, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 26.52 KiB | 5.30 MiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/ahmed-fahim/Lightoj
+ * [new branch]      codeforces -> codeforces
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git pull --rebase
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git pull https://github.com/ahmed-fahim/Lightoj codeforces --rebase
+From https://github.com/ahmed-fahim/Lightoj
+ * branch            codeforces -> FETCH_HEAD
+Already up to date.
+Current branch codeforces is up to date.
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git checkout master
+Switched to branch 'master'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git pull https://github.com/ahmed-fahim/Lightoj master --rebase
+From https://github.com/ahmed-fahim/Lightoj
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Current branch master is up to date.

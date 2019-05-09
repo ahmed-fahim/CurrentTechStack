@@ -1,0 +1,158 @@
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git branch -a
+  codeforces
+* master
+  solving
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git checkout codeforces
+Switched to branch 'codeforces'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git status
+On branch codeforces
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git add .
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git commit -m "testing merge conflict"
+[codeforces e005ce4] testing merge conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git status
+On branch codeforces
+nothing to commit, working tree clean
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git checkout master
+Switched to branch 'master'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git merge codeforces
+Updating dc5647b..e005ce4
+Fast-forward
+ Codeforces Solutions/Geometry Repo.cpp      |  622 ++++++++++
+ Codeforces Solutions/Graph Repo.cpp         |  333 ++++++
+ Codeforces Solutions/MST Repo.cpp           |  399 +++++++
+ Codeforces Solutions/Number Theory Repo.cpp | 1660 +++++++++++++++++++++++++++
+ Codeforces Solutions/Shortest Path Repo.cpp |  303 +++++
+ Codeforces Solutions/frame.cpp              |  128 +++
+ test.c                                      |    2 +-
+ 7 files changed, 3446 insertions(+), 1 deletion(-)
+ create mode 100644 Codeforces Solutions/Geometry Repo.cpp
+ create mode 100644 Codeforces Solutions/Graph Repo.cpp
+ create mode 100644 Codeforces Solutions/MST Repo.cpp
+ create mode 100644 Codeforces Solutions/Number Theory Repo.cpp
+ create mode 100644 Codeforces Solutions/Shortest Path Repo.cpp
+ create mode 100644 Codeforces Solutions/frame.cpp
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git add .
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git commit -m "Testing merge conflict 2"
+[master 334c684] Testing merge conflict 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git checkout codeforces
+Switched to branch 'codeforces'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git merge master
+Updating e005ce4..334c684
+Fast-forward
+ test.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git status
+On branch codeforces
+nothing to commit, working tree clean
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git status
+On branch codeforces
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git add .
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git commit
+Aborting commit due to empty commit message.
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git commit -m "Commiting to test merge conflict"
+[codeforces 4dc2ad3] Commiting to test merge conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (codeforces)
+$ git checkout master
+Switched to branch 'master'
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git add .
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git commit -m "Still no conflict"
+[master ea3c849] Still no conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git merge codeforces
+Auto-merging test.c
+CONFLICT (content): Merge conflict in test.c
+Automatic merge failed; fix conflicts and then commit the result.
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   test.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master|MERGING)
+$ git add .
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master|MERGING)
+$ git commit -m "Yeee fixed merge"
+[master bb21d14] Yeee fixed merge
+
+Fahim Ahmed@Hope MINGW64 /f/Works/Competitive Programming/Lightoj (master)
+$ git merge codeforces
+Already up to date.
+
