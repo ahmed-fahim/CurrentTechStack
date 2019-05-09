@@ -1,0 +1,122 @@
+#!/bin/bash
+#This is a sample script for syntax points
+
+#This is how to declare a variable. Be aware that there should not be any white spaces at any side of the assign (=) operator.
+x=11;
+y=20;
+z="This is a string literal";
+
+#string concatenation
+string1="Hellow ";
+string2="World";
+string3=$string1$string2; #you can concate like this
+string4=$string1" Additional String"" Another Additional String"; #or you can concate like this
+
+#this is how you print, just like printf in C/C++
+printf "x (%d)+ y (%d) equals %d\n" "$x" "$y" "$((x+y))"; 	#here $(()) double bracket is absolutely necessary. the first () performs the calculation, the 2nd () acesses the termporary value from the first ()
+
+printf "This is how you display a string with %%s -> %s\n" "$z"; 	# %% is how you print a single %
+
+########## for loop
+for ((i = 0	; i <= 10; i+=2)); do
+	printf "the value of i  = %d\n" "$i";
+done
+
+######### if else
+if (($x==10));
+then
+	x=20;
+	printf "It is not 10 anymore; current x = %d\n" "$x";
+elif (($y==20 || (1==1)));
+then
+	printf "Nested if Else has been entered\n";
+fi
+
+#Create a file
+touch "fileName.txt";
+
+#view all the files
+ls -l -a; #uncomment out to see the changes made by above line
+
+#remove a file
+rm "fileName.txt";
+$#ls -l -a; #uncomment out to see the changes made by above line
+
+
+#create a file only if it doesn't exist
+[[ -f "fileName.txt" ]] || touch "fileName.txt"
+$#ls -l -a; #uncomment out to see the changes made by above line
+
+#to edit a file
+$#vim "fileName.txt" #uncomment to use vim to edit the "fileName.txt" file
+
+#press 'i' to go to insert mode, navigate to desired place and start inserting
+#press Esc to get out from any mode, and enter command mode.
+#press :wq to save and exit from vim
+#press "q!" to discard and exit from vim
+#press "q" to exit if you haven't made any changes  yet
+
+
+
+#Output command line results to a file
+
+# To completely erase the contents of the existing file and write from the beginning
+printf "This is the first line\n" > "fileName.txt";
+
+# To append at the end of the contents of the existing file,
+printf "This is the second line\n" >> "fileName.txt";
+
+
+# To get current directory
+$#pwd   		#use without the '#' in front
+
+#To use the current directory and append further path
+$#cd "$(pwd)/Further path"
+
+#Find all files of a specific format (.cxx / .c / .cpp / .txt for example)
+find "$(pwd)" -name "*.txt" -print
+
+
+#Compile C++ with clang std=c++11
+$#g++ -std=c++11 source.cpp -o executable.o
+$#./executable.o
+ 
+#scan a variable
+$#read variableName;
+ 
+ 
+#Changing file permission
+$#sudo chmod 777 "file"
+#first 7 is for owner
+#second 7 is for group
+#third 7 is for others
+#7-> 111 in binary -> readPermission, writePermission, executePermission
+ 
+#copy a folder structure without its content (files)
+$#sudo rsync -a "Directory from" "Directory to" --include \*/ --exclude \*
+
+#copy a file
+$#cp sourceFile destinationPath
+
+
+#execute a line only if previous line has been successfully executed
+$#g++ souce.cpp -o source.o
+$#PREVEIOUS_COMMAND_RETURN=$?
+$#if(($PREVIOUS_COMMAND_RETURN == 0)); #if the command returns 0, it means it has been successfully executed
+$#then
+$#	./source.o
+$#else
+$#	printf "There were compilation errors\n";
+$#fi
+
+
+#creating a new directory
+link: https://www.computerhope.com/unix/umkdir.htm
+
+$#mkdir -p -m a=rwx "$proj_name";
+
+#open some file in a specific app
+$#open -a APP_NAME FILE_NAME
+Example:
+$#open -a Terminal.app scriptFile.sh #make sure scriptFile.sh has execution permission
+
