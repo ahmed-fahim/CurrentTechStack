@@ -116,3 +116,10 @@ From https://github.com/ahmed-fahim/Lightoj
  * branch            master     -> FETCH_HEAD
 Already up to date.
 Current branch master is up to date.
+
+
+############################### git credential cache setup for persistant HTTPS push,pull ###########################################
+$git config credential.helper store
+$git config --global credential.helper 'cache --timeout 7200000'
+
+The next time you push, put in your creds, it would be cached
