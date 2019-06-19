@@ -7,7 +7,7 @@ package Tester;
 //import i_love_lance_janic.Solution;
 //import ion_flux_relabeling.Solution;
 //import lovely_lucky_lambs.Solution;
-
+import prepare_the_bunnies_escape.Solution;
 /**
  *
  * @author Fahim
@@ -28,7 +28,12 @@ public class Main {
 //    static void Test_lovely_lucky_lambs() {
 //        System.out.println(Solution.solution(1000000000));
 //    }
+    static void Test_prepare_the_bunnies_escape(){
+        int[][] arg = {{0, 0, 0, 0, 0, 0}, {1, 1, 1, 1, 1, 0}, {0, 0, 0, 0, 0, 0}, {0, 1, 1, 1, 1, 1}, {0, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0}};
+        int[][] arg2 = {{0, 1, 1, 0}, {0, 0, 0, 1}, {1, 1, 0, 0}, {1, 1, 1, 0}};
+        System.out.println(Solution.solution(arg));
+    }
     public static void main(String[] args) {
-
+        Test_prepare_the_bunnies_escape();
     }
 }
