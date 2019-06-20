@@ -11,12 +11,8 @@ import java.util.ArrayList;
  *
  * @author Fahim
  */
-/**
- *
- * @author Fahim
- */
 class BaseObject<T extends Comparable<T> > extends Number implements Comparable<BaseObject<T> >{
-    T val;
+    private T val;
     public BaseObject(){
     }
     public BaseObject(T valArg){
@@ -27,29 +23,42 @@ class BaseObject<T extends Comparable<T> > extends Number implements Comparable<
         if(val instanceof Integer){
             return ((Integer) val).intValue();
         }
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Unsupported Type."); 
     }
 
     @Override
     public long longValue() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(val instanceof Long){
+            return ((Long) val).longValue();
+        }
+        throw new UnsupportedOperationException("Unsupported Type."); 
     }
 
     @Override
     public float floatValue() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(val instanceof Float){
+            return ((Float) val).floatValue();
+        }
+        throw new UnsupportedOperationException("Unsupported Type."); 
     }
 
     @Override
     public double doubleValue() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(val instanceof Double){
+            return ((Double) val).doubleValue();
+        }
+        throw new UnsupportedOperationException("Unsupported Type."); 
     }
 
     @Override
     public int compareTo(BaseObject<T> o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.val.compareTo(o.val);
     }
  
+}
+
+class Pair <T extends BaseObject>{
+
 }
 
 public class Solution {
