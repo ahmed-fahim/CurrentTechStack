@@ -57,10 +57,6 @@ class BaseObject<T extends Comparable<T> > extends Number implements Comparable<
  
 }
 
-class Pair <T extends BaseObject>{
-
-}
-
 public class Solution {
 
     public static int solution(int[][] mapArg) {

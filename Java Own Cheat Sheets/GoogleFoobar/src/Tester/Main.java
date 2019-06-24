@@ -7,7 +7,10 @@ package Tester;
 //import i_love_lance_janic.Solution;
 //import ion_flux_relabeling.Solution;
 //import lovely_lucky_lambs.Solution;
-import prepare_the_bunnies_escape.Solution;
+//import prepare_the_bunnies_escape.Solution;
+//import fuel_injection_perfection.Solution;
+import bomb_baby.Solution;
+
 /**
  *
  * @author Fahim
@@ -28,12 +31,18 @@ public class Main {
 //    static void Test_lovely_lucky_lambs() {
 //        System.out.println(Solution.solution(1000000000));
 //    }
-    static void Test_prepare_the_bunnies_escape(){
-        int[][] arg = {{0, 0, 0, 0, 0, 0}, {1, 1, 1, 1, 1, 0}, {0, 0, 0, 0, 0, 0}, {0, 1, 1, 1, 1, 1}, {0, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0}};
-        int[][] arg2 = {{0, 1, 1, 0}, {0, 0, 0, 1}, {1, 1, 0, 0}, {1, 1, 1, 0}};
-        System.out.println(Solution.solution(arg));
+//    static void Test_prepare_the_bunnies_escape(){
+//        int[][] arg = {{0, 0, 0, 0, 0, 0}, {1, 1, 1, 1, 1, 0}, {0, 0, 0, 0, 0, 0}, {0, 1, 1, 1, 1, 1}, {0, 1, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 0}};
+//        int[][] arg2 = {{0, 1, 1, 0}, {0, 0, 0, 1}, {1, 1, 0, 0}, {1, 1, 1, 0}};
+//        System.out.println(Solution.solution(arg));
+//    }
+//    static void Test_fuel_injection_perfection(){
+//        System.out.println(Solution.solution("60"));
+//    }
+    static void Test_bomb_baby(){
+        System.out.println(Solution.solution("2", "1"));
     }
     public static void main(String[] args) {
-        Test_prepare_the_bunnies_escape();
+        Test_bomb_baby();
     }
 }
