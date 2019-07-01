@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 package Tester;
+import java.util.*;
 //import i_love_lance_janic.Solution;
 //import ion_flux_relabeling.Solution;
 //import lovely_lucky_lambs.Solution;
 //import prepare_the_bunnies_escape.Solution;
 //import fuel_injection_perfection.Solution;
-import bomb_baby.Solution;
+//import bomb_baby.Solution;
+//import free_the_bunny_prisoners.Solution;
+
 
 /**
  *
@@ -39,10 +42,13 @@ public class Main {
 //    static void Test_fuel_injection_perfection(){
 //        System.out.println(Solution.solution("60"));
 //    }
-    static void Test_bomb_baby(){
-        System.out.println(Solution.solution("2", "1"));
-    }
+//    static void Test_bomb_baby(){
+//        System.out.println(Solution.solution("2", "1"));
+//    }
+//    static void Test_free_the_bunny_prisoners(){
+//        System.out.println(Arrays.deepToString(Solution.solution(5, 3)));
+//    }
     public static void main(String[] args) {
-        Test_bomb_baby();
+        
     }
 }
