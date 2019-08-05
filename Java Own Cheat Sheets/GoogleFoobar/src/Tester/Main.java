@@ -12,7 +12,7 @@ import java.util.*;
 //import fuel_injection_perfection.Solution;
 //import bomb_baby.Solution;
 //import free_the_bunny_prisoners.Solution;
-
+import bringing_a_gun_to_a_guard_fight.Solution;
 
 /**
  *
@@ -48,7 +48,13 @@ public class Main {
 //    static void Test_free_the_bunny_prisoners(){
 //        System.out.println(Arrays.deepToString(Solution.solution(5, 3)));
 //    }
+    static void Test_bringing_a_gun_to_a_guard_fight(){
+        int[] array1={300,275};
+        int[] array2={150,150};
+        int[] array3={185,100};
+        System.out.println(Solution.solution(array1, array2, array3, 500));
+    }
     public static void main(String[] args) {
-        
+        Test_bringing_a_gun_to_a_guard_fight();
     }
 }
